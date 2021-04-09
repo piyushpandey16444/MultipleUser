@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CustomUser
+from .models import CustomUser, Teacher, Student
 from .forms import CustomForm
 from django.contrib.auth.admin import UserAdmin
 
@@ -24,3 +24,5 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(Teacher)
+admin.site.register(Student)

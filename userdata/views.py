@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from .forms import CustomForm
+from .forms import CustomForm, TeacherForm
 from django.http import HttpResponseRedirect
 
 
 def create_user(request):
     if request.method == 'GET':
-        form = CustomForm()
+        form = TeacherForm()
     elif request.method == 'POST':
-        form = CustomForm(request.POST)
+        form = TeacherForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
