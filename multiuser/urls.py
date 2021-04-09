@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from userdata.views import create_user
+from userdata.views import create_user, CustomUserViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', create_user)
+    path('', CustomUserViewSet.as_view(), name="vusom")
 ]
