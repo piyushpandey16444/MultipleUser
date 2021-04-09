@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'userdata',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -99,6 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'userdata.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
