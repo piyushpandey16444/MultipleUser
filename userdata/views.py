@@ -5,9 +5,9 @@ from django.http import HttpResponseRedirect
 
 def create_user(request):
     if request.method == 'GET':
-        form = TeacherForm()
+        form = CustomForm()
     elif request.method == 'POST':
-        form = TeacherForm(request.POST)
+        form = CustomForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')

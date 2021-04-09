@@ -13,7 +13,7 @@ class Teacher(models.Model):
     user_id = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user_id.email
+        return self.user_id.username
 
 
 class Student(models.Model):
@@ -22,4 +22,4 @@ class Student(models.Model):
     teacher_id = models.ForeignKey(Teacher, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user_id.email
+        return self.user_id.username
